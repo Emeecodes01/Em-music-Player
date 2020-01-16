@@ -50,9 +50,13 @@ dependencies {
 
     //Rx Kotlin and RX Android
     implementation "io.reactivex.rxjava2:rxkotlin:${rootProject.rx_kotlin_version}"
-    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.rx_android_version}"\
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.rx_android_version}"
+    implementation "com.jakewharton.rxbinding3:rxbinding:${rootProject.rx_binding_version}"
 
     //UI
     implementation "com.google.android.material:material:${rootProject.material_app}"
+
+    //Architecture components
+    implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.lifecycle_version}"
 
 }
