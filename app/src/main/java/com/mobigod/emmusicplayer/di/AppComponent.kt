@@ -5,12 +5,13 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import dagger.BindsInstance
+import javax.inject.Singleton
 
 
-
-
+@Singleton
 @Component(modules = [AndroidInjectionModule::class,
-    ActivitiesInjectorModule::class, FragmentsInjectorModule::class, AppModule::class])
+    ActivitiesInjectorModule::class, FragmentsInjectorModule::class,
+    AppModule::class, ViewModelModule::class])
 interface AppComponent: AndroidInjector<EMMusicApp>{
 
     @Component.Builder

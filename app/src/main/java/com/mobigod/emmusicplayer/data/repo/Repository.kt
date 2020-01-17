@@ -54,12 +54,12 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
                     val artistId = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST_ID))
                     val title = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))
                     val path = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA))
-                    val displaName = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME))
+                    val displayName = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME))
                     val duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
                     val albumId = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID))
                     val album = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM))
 
-                    val song = Song(artistId, artist, title, path, displaName, duration, albumId, album)
+                    val song = Song(artistId, artist, title, path, displayName, duration, albumId, album)
                     songs.add(song)
 
                 } while (cursor.moveToNext())
