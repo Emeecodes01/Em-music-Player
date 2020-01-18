@@ -12,5 +12,6 @@ data class Song (
     val displayName: String = "",
     val duration: Long = 0,
     val albumId: Long = 0,
-    val album: String = ""
+    val album: String = "",
+    var albumArt: String? = ""
 ): Parcelable

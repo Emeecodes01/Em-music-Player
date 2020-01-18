@@ -2,6 +2,7 @@ package com.mobigod.emmusicplayer.di
 
 import android.content.Context
 import android.os.Environment
+import com.google.android.exoplayer2.SimpleExoPlayer
 import com.mobigod.emmusicplayer.EMMusicApp
 import com.mobigod.emmusicplayer.data.repo.Repository
 import com.mobigod.emmusicplayer.rx.ReactivexSchedulers
@@ -51,6 +52,9 @@ class AppModule {
     = Repository(context, songsManager)
 
 
-
+    @Provides
+    @Singleton
+    fun provideExoPlayer(context: Context)
+    = SimpleExoPlayer.Builder(context).build()
 
 }

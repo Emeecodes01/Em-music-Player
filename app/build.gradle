@@ -27,6 +27,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -54,8 +60,13 @@ dependencies {
     implementation "com.jakewharton.rxbinding3:rxbinding:${rootProject.rx_binding_version}"
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
 
+
     //UI
     implementation "com.google.android.material:material:${rootProject.material_app}"
+
+
+    //Exo Player
+    implementation "com.google.android.exoplayer:exoplayer-core:${rootProject.exoplayerVersion}"
 
     //Architecture components
     implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.lifecycle_version}"

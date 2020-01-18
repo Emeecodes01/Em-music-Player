@@ -13,13 +13,14 @@ class SongsAdapter: RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongsViewHolder {
-        binding = SongItemLayoutBinding.inflate(LayoutInflater.from(parent.context))
+        binding = SongItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SongsViewHolder(binding.root)
     }
 
     override fun getItemCount() = songList.size
 
     override fun onBindViewHolder(holder: SongsViewHolder, position: Int) {
+        holder.setIsRecyclable(false)
         holder.bindToView(position)
     }
 
@@ -39,7 +40,8 @@ class SongsAdapter: RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
     inner class SongsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         fun bindToView(position: Int) {
-            binding.songDisplayName.text = songList[position].displayName
+            binding.songDisplayName.text = songList[position].title.trim()
+            binding.artistName.text = songList[position].artist.trim()
         }
     }
 

@@ -61,6 +61,7 @@ class SongsFragment: BaseFragmant(), MviView<SongsFragmentIntent, SongsFragmentS
 
 
     private fun setUpViews() {
+
         binding.songsRv.apply {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
