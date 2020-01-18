@@ -1,5 +1,6 @@
 package com.mobigod.emmusicplayer.ui.music.activities
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +9,13 @@ import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mobigod.emmusicplayer.R
 import com.mobigod.emmusicplayer.base.BaseActivity
+import com.mobigod.emmusicplayer.base.PermissionActivity
 import com.mobigod.emmusicplayer.databinding.ActivityMusicBinding
 import com.mobigod.emmusicplayer.ui.music.adapters.MusicPagerAdapter
 import kotlinx.android.synthetic.main.toolbar_layout.*
+import java.security.Permission
 
-class MusicActivity: BaseActivity() {
+class MusicActivity: PermissionActivity() {
 
     lateinit var binding: ActivityMusicBinding
 
@@ -21,6 +24,11 @@ class MusicActivity: BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_music)
 
         setUpToolBarAndNavDrawer()
+        askForPermission(Manifest.permission.READ_EXTERNAL_STORAGE,2)
+
+    }
+
+    override fun permissionGrantedByUser() {
         setupViewPagerAndTabs()
     }
 

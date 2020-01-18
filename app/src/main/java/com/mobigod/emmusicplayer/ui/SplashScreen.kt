@@ -26,6 +26,7 @@ class SplashScreen : BaseActivity() {
 
         Handler().postDelayed({
             MusicActivity.start(this)
+            finish()
         }, 2000)
     }
 
