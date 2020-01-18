@@ -25,6 +25,7 @@
 
         <activity android:name=".ui.music.activities.MusicActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.music.activities.MusicPlayerActivity" />
 
 
         <service android:name=".services.EmPlaybackService">
