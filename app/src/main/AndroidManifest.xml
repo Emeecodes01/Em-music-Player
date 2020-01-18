@@ -26,6 +26,13 @@
         <activity android:name=".ui.music.activities.MusicActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+
+        <service android:name=".services.EmPlaybackService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

@@ -3,11 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
         <LinearLayout
             android:orientation="horizontal"
             android:padding="16dp"
@@ -17,38 +12,40 @@
             <ImageView
                 android:id="@+id/album_art"
                 android:background="@drawable/rounded_coners"
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:scaleType="fitXY"
-                android:src="@color/colorPrimaryDark"
-                android:layout_height="50dp"/>
+                android:src="@drawable/ic_headphones"
+                android:layout_height="40dp"/>
 
             <LinearLayout
                 android:layout_gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:id="@+id/song_display_name"
                     android:layout_width="wrap_content"
-                    tools:text="Adam jhrkjfhrkjhfr"
-                    android:textSize="17sp"
-                    android:singleLine="true"
+                    android:layout_height="wrap_content"
                     android:ellipsize="end"
-                    android:textColor="@color/black70"
-                    android:layout_height="wrap_content"/>
+                    android:fontFamily="@font/actor"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="Adam jhrkjfhrkjhfr" />
 
 
                 <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:id="@+id/artist_name"
                     android:layout_width="wrap_content"
                     tools:text="unknown"
-                    android:textColor="@color/black70"
+                    android:singleLine="true"
+                    android:textSize="13sp"
+                    android:ellipsize="middle"
+                    android:textColor="@color/grey50"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -62,8 +59,5 @@
                 android:src="@drawable/ic_more_vert_black_24dp"/>
 
         </LinearLayout>
-    </RelativeLayout>
-
-
 
 </layout>

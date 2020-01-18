@@ -33,6 +33,8 @@ ext {
     lifecycle_version = '2.1.0'
     rxJavaVersion = '2.1.7'
     exoplayerVersion = '2.11.1'
+    glideVersion = '4.11.0'
+    mediaVersion = '1.1.0'
 }
 
 task clean(type: Delete) {

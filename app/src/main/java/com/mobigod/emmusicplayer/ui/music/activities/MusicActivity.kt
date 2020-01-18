@@ -23,12 +23,12 @@ class MusicActivity: PermissionActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_music)
 
+        setUpToolBarAndNavDrawer()
         askForPermission(Manifest.permission.READ_EXTERNAL_STORAGE,2)
 
     }
 
     override fun permissionGrantedByUser() {
-        setUpToolBarAndNavDrawer()
         setupViewPagerAndTabs()
     }
 
