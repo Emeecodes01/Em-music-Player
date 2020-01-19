@@ -27,11 +27,14 @@ class MusicPlayerActivity: BaseFragmentActivity() {
     private lateinit var mediaBrowser: MediaBrowserCompat
     private val subscriptions = CompositeDisposable()
     private lateinit var circularMusicViewFragment: CircularMusicViewFragment
+    private var song: Song? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_music_player)
+
+        song = intent.getParcelableExtra(MusicActivity.SONG_ARG)
 
         initAllPlayerViews()
 
@@ -48,7 +51,7 @@ class MusicPlayerActivity: BaseFragmentActivity() {
     }
 
     private fun initAllPlayerViews() {
-        circularMusicViewFragment = CircularMusicViewFragment()
+        circularMusicViewFragment = CircularMusicViewFragment.getInstance(song)
     }
 
 

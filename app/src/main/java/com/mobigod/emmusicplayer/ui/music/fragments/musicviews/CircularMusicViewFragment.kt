@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.mobigod.emmusicplayer.data.model.Song
 import com.mobigod.emmusicplayer.databinding.CircularPlayerViewBinding
+import com.mobigod.emmusicplayer.utils.Tools
 
 const val SONG_FRAGMENT_ARG = "song-fragment-arg"
 
@@ -30,13 +31,13 @@ class CircularMusicViewFragment: Fragment() {
     private fun setUpPlayerViews() {
         binding.songTitleTv.text = song?.title
         binding.artistTv.text = song?.artist
-        binding.durationTv.text = song?.duration.toString()
+        binding.durationTv.text = Tools.convertMilliToDuration(song?.duration)
         binding.progressTv.text = "0:00"
     }
 
     companion object {
 
-        fun getInstance(song: Song)
+        fun getInstance(song: Song?)
          = CircularMusicViewFragment().apply {
             arguments = Bundle().apply {
                 putParcelable(SONG_FRAGMENT_ARG, song)

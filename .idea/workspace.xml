@@ -18,20 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48f59df-990c-42eb-a0d7-793edb691690" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_emmanuelmac_Library_Android_sdk_build_tools_29_0_2_renderscript_lib_androidx_rs_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_reflect_1_3_50_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/base/BaseFragmentActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pause.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_repeat_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_shuffle_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/seekbar_thumb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_music_player.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/player_control_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -42,18 +28,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/di/ActivitiesInjectorModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/di/ActivitiesInjectorModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicPlayerActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicPlayerActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/adapters/MusicPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/adapters/MusicPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/adapters/SongsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/adapters/SongsAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/SongsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/SongsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,17 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicPlayerActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/SongsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-86">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+            <state relative-caret-position="342">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -145,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+            <state relative-caret-position="232">
+              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -190,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="468">
+              <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -206,12 +175,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
+            <state relative-caret-position="1188">
               <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="e#42#102#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -282,7 +263,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/player/EMPlayerSessionCallback.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/RxExt.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/errors/MediaBrowserConnectionFailed.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/errors/MediaBrowserConnectionSuspended.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/extensions.kt" />
@@ -297,9 +277,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/player_control_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/adapters/MusicPagerAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicPlayerActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt" />
       </list>
     </option>
   </component>
@@ -406,6 +387,13 @@
               <item name="music" type="462c0819:PsiDirectoryNode" />
               <item name="fragments" type="462c0819:PsiDirectoryNode" />
               <item name="musicviews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EMMusicPlayer" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="emmusicplayer" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EMMusicPlayer" type="1abcf292:AndroidViewProjectNode" />
@@ -609,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579383533543</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. Added a base fragment for all activity that have a fragment&#10;2. Built out the basic player view&#10;3. added observable to listen to clicks from song list">
+      <created>1579465917572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579465917572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -617,7 +612,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16506922" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16506922" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -629,7 +624,7 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.4420382" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3834197" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32953367" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
@@ -644,7 +639,7 @@
       <window_info anchor="right" id="Flutter Outline" order="5" />
       <window_info anchor="right" id="Android WiFi ADB" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Preview" order="8" visible="true" weight="0.30085197" />
+      <window_info anchor="right" id="Preview" order="8" weight="0.30085197" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -686,7 +681,26 @@
     <MESSAGE value="1. Completed song list feature&#10;2. Added Media session service &#10;3. Partial implementation of media styled notification" />
     <MESSAGE value="1. Finished building notification for player&#10;2. Added actions for play,pause,next,previous" />
     <MESSAGE value="Changed the version of compiledSdk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the version of compiledSdk" />
+    <MESSAGE value="1. Added a base fragment for all activity that have a fragment&#10;2. Built out the basic player view&#10;3. added observable to listen to clicks from song list" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Added a base fragment for all activity that have a fragment&#10;2. Built out the basic player view&#10;3. added observable to listen to clicks from song list" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/data/model/Song.kt">
@@ -851,16 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="628" column="15" selection-start-line="628" selection-start-column="15" selection-end-line="628" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#41#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,32 +1039,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+        <state relative-caret-position="232">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/activities/MusicPlayerActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        <state relative-caret-position="342">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/ui/music/fragments/musicviews/CircularMusicViewFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="468">
+          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/circular_player_view.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mobigod/emmusicplayer/utils/Tools.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        <state relative-caret-position="594">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="e#42#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
