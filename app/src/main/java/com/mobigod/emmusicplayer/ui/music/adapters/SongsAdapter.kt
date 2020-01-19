@@ -10,11 +10,12 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.mobigod.emmusicplayer.R
 import com.mobigod.emmusicplayer.data.model.Song
 import com.mobigod.emmusicplayer.databinding.SongItemLayoutBinding
+import io.reactivex.Observable
+import io.reactivex.subjects.PublishSubject
 
-class SongsAdapter: RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
+class SongsAdapter(private val songSelectedInterface: SongSelectedInterface): RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
     private val songList: MutableList<Song> = mutableListOf()
     lateinit var binding: SongItemLayoutBinding
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongsViewHolder {
         binding = SongItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -23,9 +24,14 @@ class SongsAdapter: RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
 
     override fun getItemCount() = songList.size
 
+
     override fun onBindViewHolder(holder: SongsViewHolder, position: Int) {
         holder.setIsRecyclable(false)
         holder.bindToView(position)
+
+        holder.itemView.setOnClickListener {
+            songSelectedInterface.onSongSelected(songList[position])
+        }
     }
 
 
@@ -56,9 +62,12 @@ class SongsAdapter: RecyclerView.Adapter<SongsAdapter.SongsViewHolder>() {
                 .error(R.drawable.ic_headphones)
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .into(binding.albumArt)
-
-
         }
+    }
+
+
+    interface SongSelectedInterface {
+        fun onSongSelected(song: Song)
     }
 
 }

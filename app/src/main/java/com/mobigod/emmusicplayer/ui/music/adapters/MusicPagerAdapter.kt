@@ -8,13 +8,13 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mobigod.emmusicplayer.ui.music.fragments.AlbumsFragment
 import com.mobigod.emmusicplayer.ui.music.fragments.SongsFragment
 
-class MusicPagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
+class MusicPagerAdapter(fragmentActivity: FragmentActivity, private val frags: List<Fragment>): FragmentStateAdapter(fragmentActivity) {
 
-    override fun getItemCount() = 2
+    override fun getItemCount() = frags.size
 
     override fun createFragment(position: Int) =
         when(position) {
-            0 -> SongsFragment()
-            else -> AlbumsFragment()
+            0 -> frags[position]
+            else -> frags[position]
         }
 }

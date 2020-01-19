@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobigod.emmusicplayer.base.BaseFragmant
+import com.mobigod.emmusicplayer.data.model.Song
 import com.mobigod.emmusicplayer.databinding.SongListLayoutBinding
 import com.mobigod.emmusicplayer.mvibase.MviView
 import com.mobigod.emmusicplayer.ui.music.adapters.SongsAdapter
@@ -26,7 +27,7 @@ import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.subjects.PublishSubject
 import javax.inject.Inject
 
-class SongsFragment: BaseFragmant(), MviView<SongsFragmentIntent, SongsFragmentState> {
+class SongsFragment: BaseFragmant(), MviView<SongsFragmentIntent, SongsFragmentState>, SongsAdapter.SongSelectedInterface{
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -35,8 +36,12 @@ class SongsFragment: BaseFragmant(), MviView<SongsFragmentIntent, SongsFragmentS
     private val subscriptions = CompositeDisposable()
     lateinit var viewModel: SongsFragmentViewModel
     private val addToQueuePublisherIntent = PublishSubject.create<AddToQueueIntent>()
-    private val songsAdapter = SongsAdapter()
+    private val songsAdapter = SongsAdapter(this)
 
+    private val publishSubject = PublishSubject.create<Song>()
+
+    val songSelected: Observable<Song>
+        get() = publishSubject
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -60,6 +65,9 @@ class SongsFragment: BaseFragmant(), MviView<SongsFragmentIntent, SongsFragmentS
     }
 
 
+    override fun onSongSelected(song: Song) {
+        publishSubject.onNext(song)
+    }
     private fun setUpViews() {
 
         binding.songsRv.apply {
