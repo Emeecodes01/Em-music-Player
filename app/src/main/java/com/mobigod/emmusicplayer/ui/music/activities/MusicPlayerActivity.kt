@@ -84,12 +84,14 @@ class MusicPlayerActivity: BaseFragmentActivity() {
 
 
     private fun buildPlayerControls() {
-
+        val mediaController = MediaControllerCompat.getMediaController(this)
+        circularMusicViewFragment.registerMediaController(mediaController)
     }
 
 
     override fun onStart() {
         super.onStart()
+        mediaBrowser.connect()
     }
 
     override fun onResume() {
@@ -98,6 +100,8 @@ class MusicPlayerActivity: BaseFragmentActivity() {
 
     override fun onStop() {
         super.onStop()
+       // MediaControllerCompat.getMediaController(this)?.unregisterCallback(controllerCallback)
+        mediaBrowser.disconnect()
     }
 
 
