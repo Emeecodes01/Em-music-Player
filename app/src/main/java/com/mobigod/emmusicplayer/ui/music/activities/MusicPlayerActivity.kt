@@ -44,10 +44,15 @@ class MusicPlayerActivity: BaseFragmentActivity() {
             connectionCallbacks,
             null)
 
+        loadPlayerView()
+    }
 
-        startFragment(R.id.musicview_frag_container, circularMusicViewFragment,
-            CircularMusicViewFragment::class.simpleName)
 
+    private fun loadPlayerView() {
+        startFragment(
+            R.id.musicview_frag_container, circularMusicViewFragment,
+            CircularMusicViewFragment::class.simpleName
+        )
     }
 
     private fun initAllPlayerViews() {

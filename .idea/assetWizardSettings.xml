@@ -33,10 +33,11 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="1f1f1f" />
-                            <entry key="opacityPercent" value="54" />
-                            <entry key="outputName" value="ic_keyboard_arrow_down_black_24dp" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../emplayer/download.svg" />
+                            <entry key="opacityPercent" value="59" />
+                            <entry key="outputName" value="ic_pause_button" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../emplayer/pause.svg" />
                           </map>
                         </option>
                       </PersistentState>

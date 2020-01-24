@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [AndroidInjectionModule::class,
     ActivitiesInjectorModule::class, FragmentsInjectorModule::class,
-    AppModule::class, ViewModelModule::class])
+    AppModule::class, ViewModelModule::class, ServiceInjectorModule::class])
 interface AppComponent: AndroidInjector<EMMusicApp>{
 
     @Component.Builder

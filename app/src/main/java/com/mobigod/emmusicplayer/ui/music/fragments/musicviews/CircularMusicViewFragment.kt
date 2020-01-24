@@ -12,6 +12,7 @@ import com.jakewharton.rxbinding3.view.clicks
 import com.jakewharton.rxbinding3.widget.changes
 import com.jakewharton.rxbinding3.widget.systemChanges
 import com.jakewharton.rxbinding3.widget.userChanges
+import com.mobigod.emmusicplayer.R
 import com.mobigod.emmusicplayer.base.BasePlaybackView
 import com.mobigod.emmusicplayer.data.model.Song
 import com.mobigod.emmusicplayer.databinding.CircularPlayerViewBinding
@@ -27,10 +28,12 @@ import kotlin.math.roundToLong
 
 const val SONG_FRAGMENT_ARG = "song-fragment-arg"
 
-class CircularMusicViewFragment: BasePlaybackView() {
+class CircularMusicViewFragment: BasePlaybackView(), PlayerView {
     private var song: Song? = null
     private lateinit var binding: CircularPlayerViewBinding
     private val subs = CompositeDisposable()
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = CircularPlayerViewBinding.inflate(layoutInflater, container, false)
@@ -42,11 +45,12 @@ class CircularMusicViewFragment: BasePlaybackView() {
         song = arguments?.getParcelable(SONG_FRAGMENT_ARG)
         setUpPlayerViews()
         setUpListeners()
+        //Fragment(R.layout.song_item_layout)
     }
 
 
     private fun setUpListeners() {
-        subs += binding.progress.changes().subscribeBy (
+        subs += binding.progress.changes().subscribeBy(
             onNext = {
                     percentage ->
                 val progress = (percentage * 0.01 * song!!.duration).roundToLong()
@@ -58,30 +62,12 @@ class CircularMusicViewFragment: BasePlaybackView() {
             }
         )
 
-        subs += binding.playPauseBtn.clicks()
-            .subscribe {
-                handlePlayPauseClicked()
-            }
-
-        subs += binding.nextBtn.clicks()
-            .subscribe {
-                handleNextClicked()
-            }
-
-        subs += binding.previousBtn.clicks()
-            .subscribe {
-                handlePreviousClicked()
-            }
-
-        subs += binding.shuffleBtn.clicks()
-            .subscribe {
-                handleShuffleClicked(noOfShuffleClicks++)
-            }
-
-        subs += binding.repeatBtn.clicks()
-            .subscribe {
-                handleRepeatClicked(noOfRepeatClicks)
-            }
+        nextBtnListener()
+        previousBtnListener()
+        playBtnListener()
+        pauseBtnListener()
+        repeatBtnListener()
+        shuffleBtnClicked()
     }
 
     private fun setUpPlayerViews() {
@@ -93,12 +79,23 @@ class CircularMusicViewFragment: BasePlaybackView() {
 
 
     override fun syncMetaData(metadataCompat: MediaMetadataCompat?) {
-        mediaController?.queue
+        //todo: set view to new metadata
+
     }
+
 
     override fun syncPlaybackState(playbackStateCompat: PlaybackStateCompat?) {
-
+        when(playbackStateCompat?.state) {
+            PlaybackStateCompat.STATE_PLAYING -> {
+                binding.playPauseBtn.setImageDrawable(context?.getDrawable(R.drawable.ic_pause_button))
+            }
+            PlaybackStateCompat.STATE_PAUSED -> {
+                binding.playPauseBtn.setImageDrawable(context?.getDrawable(R.drawable.ic_play_button))
+            }
+        }
     }
+
+
 
     override fun onStop() {
         super.onStop()
@@ -106,8 +103,59 @@ class CircularMusicViewFragment: BasePlaybackView() {
     }
 
 
-    companion object {
 
+    override fun nextBtnListener() {
+        subs += binding.nextBtn
+            .clicks()
+            .subscribe {
+                handleNextClicked()
+            }
+    }
+
+
+    override fun previousBtnListener() {
+        subs += binding.previousBtn
+            .clicks()
+            .subscribe {
+                handlePreviousClicked()
+            }
+    }
+
+    override fun playBtnListener() {
+        subs += binding.playPauseBtn
+            .clicks()
+            .subscribe {
+                handlePlayPauseClicked()
+            }
+    }
+
+    override fun pauseBtnListener() {
+        subs += binding.playPauseBtn
+            .clicks()
+            .subscribe {
+                handlePlayPauseClicked()
+            }
+    }
+
+    override fun repeatBtnListener() {
+        subs += binding.repeatBtn
+            .clicks()
+            .subscribe {
+                handleRepeatClicked(noOfRepeatClicks)
+            }
+    }
+
+    override fun shuffleBtnClicked() {
+        subs += binding.shuffleBtn
+            .clicks()
+            .subscribe {
+                handleShuffleClicked(noOfShuffleClicks++)
+            }
+    }
+
+
+
+    companion object {
         fun getInstance(song: Song?)
          = CircularMusicViewFragment().apply {
             arguments = Bundle().apply {
@@ -115,5 +163,6 @@ class CircularMusicViewFragment: BasePlaybackView() {
             }
         }
     }
+
 }
 

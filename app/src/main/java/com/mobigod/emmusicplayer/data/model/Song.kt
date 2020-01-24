@@ -4,7 +4,8 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Song (
+data class Song(
+    val id: Int = 0,
     val artistId: Long = 0,
     val artist: String = "",
     val title: String = "",
@@ -13,5 +14,6 @@ data class Song (
     val duration: Long = 0,
     val albumId: Long = 0,
     val album: String = "",
-    var albumArt: String? = ""
+    var albumArt: String? = "",
+    val dateAdded: Long = 0
 ): Parcelable

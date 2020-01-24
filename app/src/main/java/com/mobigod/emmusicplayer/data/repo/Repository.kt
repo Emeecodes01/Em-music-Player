@@ -47,8 +47,6 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
 
             cursor?.close()
 
-
-
             emitter.onNext(songs)
             emitter.onComplete()
         }
@@ -72,9 +70,26 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
     }
 
 
+    override fun getLastAddedSongs(): Observable<List<Song>> {
+        return getAllSongsFromStorage()
+            .map {songs -> songs.sortedBy { it.dateAdded }}
+            .flatMap {
+                Observable.fromIterable(it)
+                    .take(10)
+                    .toList()
+                    .doOnSuccess {
+                        songs ->
+                        songsManager.addSongsToQueue(songs)
+                    }
+                    .toObservable()
+            }
+    }
 
-    private fun construstSongs(cursor: Cursor, songs: MutableList<Song>){
+
+
+    private fun construstSongs(cursor: Cursor, songs: MutableList<Song>) {
         do {
+            val songId = cursor.getInt(cursor.getColumnIndex(MediaStore.Audio.Media._ID))
             val artist = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST))
             val artistId = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST_ID))
             val title = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))
@@ -84,10 +99,15 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
             val duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
             val albumId = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID))
             val album = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM))
+            val dateAdded = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DATE_ADDED))
 
             displayName = Tools.getSongNameFromRoughPath(displayName)
 
-            val song = Song(artistId, artist, title, path, displayName, duration, albumId, album)
+            val song = Song(
+                songId, artistId, artist,
+                title, path, displayName,
+                duration, albumId, album, dateAdded = dateAdded)
+
             songs.add(song)
 
         } while (cursor.moveToNext())

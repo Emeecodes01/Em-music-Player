@@ -76,6 +76,7 @@ dependencies {
     //Exo Player and Media
     implementation "com.google.android.exoplayer:exoplayer-core:${rootProject.exoplayerVersion}"
     implementation "androidx.media:media:${rootProject.mediaVersion}"
+    implementation "com.google.android.exoplayer:extension-mediasession:${rootProject.exoplayerVersion}"
 
     //Architecture components
     implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.lifecycle_version}"

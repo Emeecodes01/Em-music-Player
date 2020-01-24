@@ -9,39 +9,27 @@ import androidx.core.content.ContextCompat
 import androidx.media.app.NotificationCompat.MediaStyle
 import com.mobigod.emmusicplayer.R
 import androidx.media.session.MediaButtonReceiver
+import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector
+import com.google.android.exoplayer2.source.MediaSource
 import com.mobigod.emmusicplayer.services.EmPlaybackService
+import com.mobigod.emmusicplayer.songsmanager.SongsManager
 
-class EMPlayerSessionCallback(private val context: Context): MediaSessionCompat.Callback() {
-    var ms: MediaSessionCompat? = null
+/**
+ * This class basically do the following
+ * (1) Controls how to start or stop a service,
+ * (2) Controls notifications
+ *
+ */
+class EMPlayerSessionCallback(private val service: EmPlaybackService,
+                              val connector: MediaSessionConnector, val songsManager: SongsManager) {
 
-    private val musicNotificationManager = MusicNotificationManager(context)
+    private val musicNotificationManager = MusicNotificationManager(service)
+    private val musicPlaybackHelper = MusicPlayerHelper(service)
 
-
-    override fun onPlay() {
-        super.onPlay()
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onSkipToNext() {
-        super.onSkipToNext()
-    }
-
-    override fun onSkipToPrevious() {
-        super.onSkipToPrevious()
+    init {
+        musicPlaybackHelper.setMediaSessionConnectorWithPlayer(connector, songsManager)
     }
 
 
-    override fun onSetShuffleMode(shuffleMode: Int) {
-        super.onSetShuffleMode(shuffleMode)
-    }
-
-
-    override fun onSetRepeatMode(repeatMode: Int) {
-        super.onSetRepeatMode(repeatMode)
-    }
 
 }

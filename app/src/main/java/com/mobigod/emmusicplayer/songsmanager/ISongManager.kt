@@ -4,8 +4,7 @@ import com.mobigod.emmusicplayer.data.model.Song
 
 interface ISongManager {
     fun addSongToPlayQueue(song: Song)
-    fun addSongToPlayedQueue(song: Song)
-    fun addAllSongToQueue(vararg songs: Song)
+    fun removeSongFromQueue(id: Int)
     fun clearSongsQueue()
-    fun clearPlayedSongs()
+    fun addSongsToQueue(songs: List<Song>)
 }
