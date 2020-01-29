@@ -8,4 +8,7 @@
     <string name="play">Play</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="notification_chal_name">Notification1</string>
+    <string name="notification_chal_des">Notification1Description</string>
 </resources>

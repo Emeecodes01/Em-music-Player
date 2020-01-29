@@ -28,6 +28,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'APP_NAME', '"EM Music Player"')
+        }
+
+        debug {
+            initWith release
+            buildConfigField('String', 'APP_NAME', '"EM Music Player Dev"')
         }
     }
 
@@ -77,6 +83,7 @@ dependencies {
     implementation "com.google.android.exoplayer:exoplayer-core:${rootProject.exoplayerVersion}"
     implementation "androidx.media:media:${rootProject.mediaVersion}"
     implementation "com.google.android.exoplayer:extension-mediasession:${rootProject.exoplayerVersion}"
+    implementation "com.google.android.exoplayer:exoplayer-ui:${rootProject.exoplayerVersion}"
 
     //Architecture components
     implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.lifecycle_version}"

@@ -13,4 +13,6 @@ interface IRepository {
      * Start number is 10
      */
     fun getLastAddedSongs(): Observable<List<Song>>
+
+    fun addSongToQueue(song: Song)
 }

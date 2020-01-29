@@ -15,7 +15,7 @@ import java.util.*
 import javax.inject.Inject
 import kotlin.Comparator
 
-class Repository @Inject constructor(val context: Context, val songsManager: SongsManager): IRepository {
+class Repository @Inject constructor(private val context: Context, private val songsManager: SongsManager): IRepository {
 
     override fun getAllSongsFromStorage(): Observable<List<Song>> {
         //use the android content provider to get all songs in the device
@@ -72,7 +72,7 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
 
     override fun getLastAddedSongs(): Observable<List<Song>> {
         return getAllSongsFromStorage()
-            .map {songs -> songs.sortedBy { it.dateAdded }}
+            .map {songs -> songs.sortedBy { it.dateAdded }.reversed()}
             .flatMap {
                 Observable.fromIterable(it)
                     .take(10)
@@ -142,7 +142,8 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
             MediaStore.Audio.Media.DISPLAY_NAME,
             MediaStore.Audio.Media.DURATION,
             MediaStore.Audio.Media.ALBUM_ID,
-            MediaStore.Audio.Media.ALBUM
+            MediaStore.Audio.Media.ALBUM,
+            MediaStore.Audio.Media.DATE_ADDED
         )
         return projection
     }
@@ -178,6 +179,10 @@ class Repository @Inject constructor(val context: Context, val songsManager: Son
             }
         }
 
+    }
+
+    override fun addSongToQueue(song: Song) {
+        songsManager.addSongToPlayQueue(song)
     }
 
 }

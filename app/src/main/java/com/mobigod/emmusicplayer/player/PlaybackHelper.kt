@@ -43,7 +43,7 @@ abstract class PlaybackHelper(private val context: Context) {
 
     abstract fun playFromMedia(metadata: MediaMetadataCompat)
 
-    abstract fun getCurrentMedia(): MediaMetadataCompat
+    //abstract fun getCurrentMedia(): MediaMetadataCompat
 
     abstract fun isPlaying(): Boolean
 

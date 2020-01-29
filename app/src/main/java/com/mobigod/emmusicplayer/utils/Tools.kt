@@ -1,9 +1,15 @@
 package com.mobigod.emmusicplayer.utils
 
 
+import android.content.Context
+import android.net.Uri
 import android.text.TextUtils
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
+import android.provider.MediaStore
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+
 
 object Tools {
 
@@ -35,5 +41,8 @@ object Tools {
         return duration
     }
 
+
+    fun getBitmapFromPath(context: Context, path: String)
+        = MediaStore.Images.Media.getBitmap(context.contentResolver, Uri.parse(path))
 
 }

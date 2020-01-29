@@ -25,6 +25,7 @@ class MusicPlayerHelper(val context: Context): PlaybackHelper(context) {
     fun setMediaSessionConnectorWithPlayer(mediaSessionConnector: MediaSessionConnector,
                                            songsManager: SongsManager) {
         mediaSessionConnector.setPlayer(player)
+        onPlay()
     }
 
 
@@ -32,9 +33,9 @@ class MusicPlayerHelper(val context: Context): PlaybackHelper(context) {
 
     }
 
-    override fun getCurrentMedia(): MediaMetadataCompat {
-
-    }
+//    override fun getCurrentMedia(): MediaMetadataCompat {
+//
+//    }
 
     override fun isPlaying() =
        player.isPlaying

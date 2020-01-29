@@ -17,7 +17,7 @@ class SongsFragmentProcessorHolder @Inject constructor(repository: Repository, s
     private val loadAllSongsProcessor =
         ObservableTransformer<LoadSongsFromStorageAction, LoadSongsFromStorageResult>{actions ->
             actions.flatMap {
-                repository.getAllSongsFromStorage()
+                repository.getLastAddedSongs()
                     .map {songs ->  LoadSongsFromStorageResult.Success(songs)}
                     .cast(LoadSongsFromStorageResult::class.java)
                     .onErrorReturn(LoadSongsFromStorageResult::Failure)
@@ -32,6 +32,7 @@ class SongsFragmentProcessorHolder @Inject constructor(repository: Repository, s
         ObservableTransformer<AddToQueueAction, AddToQueueResult> {action ->
             action.flatMap {
                 val song = it.song
+                repository.addSongToQueue(song)
                 //for now, implement this later
                 Observable.just("")
                     .map { item -> AddToQueueResult.Success }

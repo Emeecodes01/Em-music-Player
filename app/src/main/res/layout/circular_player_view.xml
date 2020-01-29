@@ -121,7 +121,7 @@
                         android:id="@+id/play_pause_btn"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_pause"/>
+                        android:src="@drawable/ic_play_button"/>
 
                     <Space
                         android:layout_width="0dp"
